@@ -25,7 +25,12 @@ public class FirstServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		processRequest(request,response);
+	}
+
+	private void processRequest(HttpServletRequest request, HttpServletResponse response) {
+		System.out.println("Request Processing");
+		
 	}
 
 	/**
@@ -33,7 +38,7 @@ public class FirstServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		processRequest(request,response);
 	}
 
 }
